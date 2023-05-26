@@ -10,18 +10,46 @@
 
   
   <body>
+    <div id="background"></div>
+
+    <script>
+        var background = document.getElementById('background');
+        var images = [
+            'finalimg/web/xian/xian3.jpg',
+            'finalimg/pojian.jpg',
+            'finalimg/xian.jpg',
+            'finalimg/cd.jpg',
+            'finalimg/web/细节图4.jpg',
+            'finalimg/web/fantu.jpeg',
+            'finalimg/web/6.png',
+            'finalimg/web/erduo.jpeg',
+            'finalimg/xiaok.jpeg',
+            // 添加更多图片URL
+        ];
+
+        function getRandomImage() {
+            var randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        function setBackgroundImage() {
+            var imageUrl = getRandomImage();
+            background.style.backgroundImage = 'url(' + imageUrl + ')';
+        }
+
+        background.addEventListener('click', setBackgroundImage);
+        setBackgroundImage();
+    </script>
     
     <div class="p1">
         <p>
             Ke Jingran is an independent designer and artist, primarily engaged in graphic design, book design, and modeling as means of contemporary design intervention. Jingran focuses on issues such as the contemporary online ecosystem in China and the impact of urbanization in the southeastern region on individuals.
         </p>
     </div>
-    <a class="button1" href="graphicpage.html">Graphic</a>
-    <a class="button2" href="modelingpage.html">Modeling</a>
-    <a class="button3" href="fontspage.html">Fonts</a>
-    <a class="button4" href="filmpage.html">Film</a>
-    <a class="button6" href="exhibitionpage.html">Exhibition</a>
-    <a class="button7" href="fragment.html">Fragments</a>
+    <a class="button1" href="html/graphicpage.html">Graphic</a>
+    <a class="button2" href="html/modelingpage.html">Modeling</a>
+    <a class="button3" href="fontspage.html">Film</a>
+    <a class="button4" href="filmpage.html">Exhibition</a>
     <div class="p2">
         <p>
             E-mail:1240163819@qq.com
@@ -31,7 +59,7 @@
             xiaohongshu:251498396
         </p>
     </div>
-        <button class="button5" onclick="scrollToTop()">Ke Jingran</button>
+    <div class="p3">Ke Jingran</div>
 
     
 
@@ -45,45 +73,70 @@
 
 @font-face {
     font-family: 'mboldi';
-    src:url('../font/MirthaDisplayBoldItalic的副本.otf') format('truetype');
+    src:url('font/MirthaDisplayBoldItalic的副本.otf') format('truetype');
     font-family:'mitalic';
-    src:url('../font/MirthaDisplayItalic的副本.otf') format('truetype');
+    src:url('font/MirthaDisplayItalic的副本.otf') format('truetype');
     font-family:'mbold';
-    src:url('../font/MirthaDisplayBold的副本.otf') format('truetype');
+    src:url('font/MirthaDisplayBold的副本.otf') format('truetype');
     font-family:'mregular';
-    src:url('../font/MirthaDisplayRegular的副本.otf') format('truetype');
+    src:url('font/MirthaDisplayRegular的副本.otf') format('truetype');
     
   }
-body{
+  body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(0, 0, 0);
+        }
+       
+        #background {
+          
+            position: absolute;
+            top: 0;
+            left: 400px;
+            width: 600px;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+        }
 
-    /*background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,  rgb(255, 255, 255) 6%, rgba(0, 0, 0, 1) 8%);*/
-    background-color: black;
-   
-    height: 100vh;
-    position: relative;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    }
 .p1{
     width:400px;
-    position:absolute;
-    top:40px;
+    position: fixed;
+    top:20px;
     left:55px;
-    font-size: 18px;
+    font-size: 13px;
     font-family:Arial, Helvetica, sans-serif;
     color:rgb(255, 0, 140);
 }
+.p2:hover{
+    text-decoration: line-through;
+}
 .p2{
     width:400px;
-    position:absolute;
     position: fixed;
-    bottom:60px;
+    top:300px;
     left:55px;
     font-size: 30px;
     font-family: mregular;
     color:rgb(255, 0, 140);
      z-index:100;
+}
+.p3{
+
+    position: fixed;
+    top:600px;
+    left:50px;
+    font-size: 200px;
+    font-family: mregular;
+    color:rgb(255, 0, 140);
+     z-index:100;
+     font-weight: 500;
 }
 /*.rectangle {
       width: 80px;
@@ -96,263 +149,94 @@ body{
     }*/
 
     .button1 {
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color: rgb(255, 0, 140);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
+      
+      color:  rgb(255, 0, 140);
+      font-size: 80px;
       text-decoration: none;
       cursor: pointer;
-      position:absolute;
+      position: fixed;
       top:40px;
-      left:1270px;
+      right:40px;
       font-family: mregular;
 
     }
     
     .button1:hover {
-        background-color:rgb(255, 255, 255);
-      box-shadow: 0 0 20px rgba(255, 198, 228, 0.8);
-      color:black;
+        
+      text-shadow: 0 0 30px rgba(255, 198, 228, 0.8);
+      color:rgb(255, 255, 255);
+      font-style: italic;
+      font-size: 100px;
+    
     }
 
     .button2 {
-        font-family: mregular;
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color: rgb(255, 0, 140);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
-      text-decoration: none;
-      cursor: pointer;
-      position:absolute;
-      top:95px;
-      left:1270px;
       
-
-    }
-    
-    .button2:hover {
-        background-color:rgb(255, 255, 255);
-      box-shadow: 0 0 20px rgba(255, 198, 228, 0.8);
-      color:black;
-    }
-
-    .button3 {
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color: rgb(255, 0, 140);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
+      color:  rgb(255, 0, 140);
+      font-size: 80px;
       text-decoration: none;
       cursor: pointer;
-      position:absolute;
-      top:150px;
-      left:1270px;
+      position: fixed;
+      top:260px;
+      right:40px;
       font-family: mregular;
 
     }
     
+    .button2:hover {
+        
+      text-shadow: 0 0 30px rgba(255, 198, 228, 0.8);
+      color:rgb(255, 255, 255);
+      font-style: italic;
+      font-size: 100px;
+    }
+
+    .button3 {
+      
+      color:  rgb(255, 0, 140);
+      font-size: 80px;
+      text-decoration: none;
+      cursor: pointer;
+      position: fixed;
+      top:460px;
+      right:40px;
+      font-family: mregular;
+      
+
+    }
+    
     .button3:hover {
-        background-color:rgb(255, 255, 255);
-      box-shadow: 0 0 20px rgba(255, 198, 228, 0.8);
-      color:black;
+        
+      text-shadow: 0 0 30px rgba(255, 198, 228, 0.8);
+      color:rgb(255, 255, 255);
+      font-style: italic;
+      font-size: 100px;
     }
 
     .button4 {
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color: rgb(255, 0, 140);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
+      
+      color:  rgb(255, 0, 140);
+      font-size: 80px;
       text-decoration: none;
       cursor: pointer;
-      position:absolute;
-      top:205px;
-      left:1270px;
+      position: fixed;
+      top:675px;
+      right:40px;
       font-family: mregular;
 
     }
     
     .button4:hover {
-        background-color:rgb(255, 255, 255);
-      box-shadow: 0 0 20px rgba(255, 198, 228, 0.8);
-      color:black;
+        
+      text-shadow: 0 0 30px rgba(255, 198, 228, 0.8);
+      color:rgb(255, 255, 255);
+      font-style: italic;
+      font-size: 100px;
     }
 
-    .button6 {
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color: rgb(255, 0, 140);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
-      text-decoration: none;
-      cursor: pointer;
-      position:absolute;
-      top:260px;
-      left:1270px;
-      font-family: mregular;
-      
-
-    }
-    
-    .button6:hover {
-      background-color:rgb(255, 255, 255);
-      box-shadow: 0 0 20px rgba(255, 198, 228, 0.8);
-      color:black;
-    }
-
-    .button7 {
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color: rgb(255, 0, 140);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
-      text-decoration: none;
-      cursor: pointer;
-      position:absolute;
-      top:315px;
-      left:1270px;
-      font-family: mregular;
-      
-
-    }
-    
-    .button7:hover {
-      background-color:rgb(255, 255, 255);
-      box-shadow: 0 0 20px rgba(255, 198, 228, 0.8);
-      color:black;
-    }
-
-
-
-    .button5 {
-      display: inline-block;
-      width: 130px;
-      height: 40px;
-      background-color: rgb(255, 0, 140);
-      color: #fff;
-      border-radius: 15px;
-      text-align: center;
-      line-height: 35px;
-      text-decoration: none;
-      cursor: pointer;
-      font-family: MRegular;
-      Font-size:40px;
-      position: fixed;
-      bottom: 40px;
-      left: 55px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      z-index:100;
-
-    }
-
-    .gaplife {
-    position: absolute;
-    top: 450px;
-    left: 30px;
-    color:#fff;
-    width:500px;
-  }
-
-  
-
-    .button8 {
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color:rgb(255, 85, 0);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
-      text-decoration: none;
-      cursor: pointer;
-      position:absolute;
-      top:920px;
-      left:1270px;
-      font-family: mregular;
-      
-
-    }
-    
-    .button8:hover {
-      background-color:rgb(255, 255, 255);
-      box-shadow: 0 0 20px rgba(255, 198, 228, 0.8);
-      color:black;
-    }
-
-    .button9 {
-      display: inline-block;
-      width: 100px;
-      height: 45px;
-      border-radius: 15px;
-      background-color:rgb(255, 85, 0);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      line-height: 50px;
-      font-size: 30px;
-      text-decoration: none;
-      cursor: pointer;
-      position:absolute;
-      top:975px;
-      left:1270px;
-      font-family: mregular;
-      
-
-    }
-    
-    .button9:hover {
-      background-color:rgb(0, 255, 221);
-      box-shadow: 0 0 10px rgba(255, 198, 228, 0.8);
-      color:black;
-    }
     
 
-    .img7 {
-      width: 1300px;
-      border-radius: 20px;
-      overflow: hidden;
-      display: flex;
-      position:absolute;
-      top:3000px;
-      left:50px;
-    }
+    
+    
 
-    .img7 img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      z-index: 99;
-     
-    }
-
- </style>
+    </style>

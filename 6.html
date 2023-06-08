@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kira🐻</title>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="#" />
+    
+  </head>
+  </html>
+  <body>
+    <div class="box" id="box1" onclick="changeImage('box1')">
+      <img id="image1" src="finalimg/web/s/s18.png" alt="img01">
+    </div>
+    
+    <div class="box" id="box2" onclick="changeImage('box2')">
+      <img id="image2" src="finalimg/web/s/s12.png" alt="img02">
+    </div>
+    <div class="imgx">
+      <img src="finalimg/web/s/s1.jpg" alt="imgxx">
+  </div>
+  <div class="img4">
+    <img src="finalimg/web/s/s2.jpg" alt="img04">
+</div>
+<div class="img5">
+  <img src="finalimg/web/s/s4.jpg" alt="img05">
+</div>
+<div class="img6">
+    <img src="finalimg/web/s/s6.jpg" alt="img06">
+  </div>
+  <div class="img7">
+    <img src="finalimg/web/s/s5.jpg" alt="img07">
+  </div>
+ <div class="img8">
+    <img src="finalimg/web/s/s9.jpg" alt="img08">
+  </div>
+
+  <div id="breaking">
+    <video width="900"  muted autoplay playsinline loop style="position: absolute; top: 1850px; left: 250px;">
+        <source src="finalimg/web/s/s0.mp4" type="video/mp4">
+    </video>
+    </div>
+
+    <div class="p1">
+       Spark
+    </div>
+    <div class="p2">
+     2022.4
+    </div>
+    <div class="p3">
+        Spark app is dedicated to being an easy-to-use, no-holds-barred online dating and relationship app for middle-aged and older adults. We offer diverse, reliable and high-quality social features from the user's perspective, connecting every user who is eager to connect with others and wants to ignite a spark of romantic love.
+     </div>
+     <div class="p4">
+      Click to change the pictures of the UI design
+     </div>
+     <div class="p5">
+      Click to change the pictures of the VI design
+     </div>
+     <a class="p6" href="graphicpage.html">Back</a>
+    
+
+
+     <script>
+     var currentImageIndex1 = 0;
+var images1 = [
+  "finalimg/web/s/s8.jpg",
+  "finalimg/web/s/s1.jpg",
+  "finalimg/web/s/s13.png",
+  "finalimg/web/s/s18.png",
+ 
+];
+
+var currentImageIndex2 = 0;
+var images2 = [
+"finalimg/web/s/s11.png",
+  "finalimg/web/s/s19.png",
+  "finalimg/web/s/s10.png",
+  "finalimg/web/s/s12.png",
+];
+
+function changeImage(boxId) {
+  var image;
+  var currentImageIndex;
+  var images;
+
+  if (boxId === 'box1') {
+    image = document.getElementById("image1");
+    currentImageIndex = currentImageIndex1;
+    images = images1;
+  } else if (boxId === 'box2') {
+    image = document.getElementById("image2");
+    currentImageIndex = currentImageIndex2;
+    images = images2;
+  }
+
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  image.src = images[currentImageIndex];
+
+  if (boxId === 'box1') {
+    currentImageIndex1 = currentImageIndex;
+  } else if (boxId === 'box2') {
+    currentImageIndex2 = currentImageIndex;
+  }
+}
+
+    </script>
+
+  </body>
+
+  <style>
+    body{
+
+/*background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,  rgb(255, 255, 255) 6%, rgba(0, 0, 0, 1) 8%);*/
+background-color: rgb(0, 0, 0);
+
+height: 2000vh;
+position: relative;
+max-width: 1600px;
+margin: 0 auto;
+padding-bottom: 40px;
+}
+
+
+
+@font-face {
+    font-family: 'mboldi';
+    src:url('font/MirthaDisplayBoldItalic的副本.otf') format('truetype');
+    font-family:'mitalic';
+    src:url('font/MirthaDisplayItalic的副本.otf') format('truetype');
+    font-family:'mbold';
+    src:url('font/MirthaDisplayBold的副本.otf') format('truetype');
+    font-family:'mregular';
+    src:url('font/MirthaDisplayRegular的副本.otf') format('truetype');
+    
+    }
+
+
+.p1{
+  position:absolute;
+  top:50px;
+  left:50px;
+  color:rgb(255, 130, 161);
+  font-family: mregular;
+  font-size: 100px;
+}
+  
+.p2{
+  position:absolute;
+  top:160px;
+  left:50px;
+  color:rgb(255, 130, 161);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+  
+.p3{
+  position:absolute;
+  top:200px;
+  width:520px;
+  left:50px;
+  color:rgb(255, 130, 161);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.p4{
+  position:absolute;
+  top:600px;
+  left:550px;
+  color:rgb(255, 130, 161);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p5{
+  position:absolute;
+  top:1200px;
+  left:550px;
+  color:rgb(255, 130, 161);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p6{
+  position:absolute;
+  top:50px;
+  left:1250px;
+  color:rgb(255, 130, 161);
+  font-family: mregular;
+  font-size: 100px;
+  text-decoration: none;
+}
+.p6:hover{
+  text-shadow: 0 0 30px rgba(255, 198, 228, 0.8);
+        color:rgb(255, 255, 255);
+        font-style: italic;
+       
+      
+}
+
+  .imgx{
+    position: absolute;
+    left:950px;
+    top:250px;
+    width:400px;
+
+  }
+
+ .imgx img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+     z-index: 99;
+    
+   }
+
+
+
+
+.img4{
+    position:absolute;
+    top: 2530px; left: 250px;
+    width:900px;
+   
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img4 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img5{
+    position:absolute;
+    top: 3230px; left: 250px;
+    width:900px;
+ 
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img5 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img6{
+    position:absolute;
+    top: 3930px; left: 250px;
+    width:900px;
+  
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img6 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img7{
+    position:absolute;
+    top: 4630px; left: 250px;
+    width:900px;
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img7 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img8{
+    position:absolute;
+    top: 5250px; left: 250px;
+    width:900px;
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img8 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.box { position: absolute; 
+  width: 900px; 
+  height: auto; 
+ 
+ 
+  overflow: hidden; 
+  cursor: pointer; } 
+  #box1 { top: 650px; left: 250px; } 
+  #box2 { top: 1250px; left: 250px; } 
+  .box img { width: 100%; height: auto; object-fit: contain; }
+
+
+  </style>

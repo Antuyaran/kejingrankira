@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kira🐻</title>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="#" />
+    
+  </head>
+  </html>
+  <body>
+    <div class="box" id="box1" onclick="changeImage('box1')">
+      <img id="image1" src="finalimg/web/xian/xian3.jpg" alt="img01">
+    </div>
+    
+    <div class="box" id="box2" onclick="changeImage('box2')">
+      <img id="image2" src="finalimg/web/xian/1 限 封面.jpg" alt="img02">
+    </div>
+
+  <div class="img3">
+    <img src="finalimg/web/xian/21.jpg" alt="img03">
+</div>
+<div class="img4">
+    <img src="finalimg/web/xian/22.jpg" alt="img04">
+</div>
+<div class="img5">
+    <img src="finalimg/web/xian/23.jpg" alt="img05">
+</div>
+
+<div class="imgx">
+    <img src="finalimg/web/xian/1 限 封面.jpg" alt="imgxx">
+</div>
+
+    <div class="p1">
+      Limited
+    </div>
+    <div class="p2">
+     2022.9
+    </div>
+    <div class="p3">
+        Breaking Music Festival is an electronic music festival project tailored for NetEase's electro music brand FEVER.
+        <br>
+        The location of the festival is the Lusheng Square in the Thousand Household Miao Village in Guizhou Province. We took the ancient legend of the Miao minority, "Mother Butterfly", as the entry point, trying to find the connection between electro music and traditional culture, and combined the silver ornaments in Miao costumes with the envelope line after the visualization of electronic music to complete our concept and visual content for this project.
+     </div>
+     <div class="p4">
+      Click to change the pictures of the book
+     </div>
+     <div class="p5">
+        Click to change the pictures of the book
+     </div>
+     <a class="p6" href="graphicpage.html">Back</a>
+     <div class="p7">
+       Teammates:Ke Jingran,  Liu Shutong, Shao Mingxuan
+    </div>
+    <div class="p8">
+        Inside pages of books
+    </div>
+    <div class="p9">
+        Inside pages of books
+    </div>
+    <div class="p10">
+        Inside pages of books
+    </div>
+    
+
+
+     <script>
+     var currentImageIndex1 = 0;
+var images1 = [
+  "finalimg/web/xian/1.jpg",
+  "finalimg/web/xian/2.jpg",
+  "finalimg/web/xian/3.jpg",
+  "finalimg/web/xian/4.jpg",
+  "finalimg/web/xian/xian3.jpg",
+];
+
+var currentImageIndex2 = 0;
+var images2 = [
+  "finalimg/web/xian/11.jpg",
+  "finalimg/web/xian/12.jpg",
+  "finalimg/web/xian/13.jpg",
+  "finalimg/web/xian/1 限 封面.jpg",
+];
+
+function changeImage(boxId) {
+  var image;
+  var currentImageIndex;
+  var images;
+
+  if (boxId === 'box1') {
+    image = document.getElementById("image1");
+    currentImageIndex = currentImageIndex1;
+    images = images1;
+  } else if (boxId === 'box2') {
+    image = document.getElementById("image2");
+    currentImageIndex = currentImageIndex2;
+    images = images2;
+  }
+
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  image.src = images[currentImageIndex];
+
+  if (boxId === 'box1') {
+    currentImageIndex1 = currentImageIndex;
+  } else if (boxId === 'box2') {
+    currentImageIndex2 = currentImageIndex;
+  }
+}
+
+    </script>
+
+  </body>
+
+  <style>
+    body{
+
+/*background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,  rgb(255, 255, 255) 6%, rgba(0, 0, 0, 1) 8%);*/
+background-color: rgb(0, 0, 0);
+
+height: 2000vh;
+position: relative;
+max-width: 1600px;
+margin: 0 auto;
+padding-bottom: 40px;
+}
+
+
+
+@font-face {
+    font-family: 'mboldi';
+    src:url('font/MirthaDisplayBoldItalic的副本.otf') format('truetype');
+    font-family:'mitalic';
+    src:url('font/MirthaDisplayItalic的副本.otf') format('truetype');
+    font-family:'mbold';
+    src:url('font/MirthaDisplayBold的副本.otf') format('truetype');
+    font-family:'mregular';
+    src:url('font/MirthaDisplayRegular的副本.otf') format('truetype');
+    
+    }
+
+
+.p1{
+  position:absolute;
+  top:50px;
+  left:50px;
+  color:rgb(87, 146, 255);
+  font-family: mregular;
+  font-size: 100px;
+}
+  
+.p2{
+  position:absolute;
+  top:160px;
+  left:50px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+  
+.p3{
+  position:absolute;
+  top:200px;
+  width:500px;
+  left:50px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.p4{
+  position:absolute;
+  top:660px;
+  left:600px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p5{
+  position:absolute;
+  top:1300px;
+  left:600px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p6{
+  position:absolute;
+  top:50px;
+  left:1250px;
+  color:rgb(87, 146, 255);
+  font-family: mregular;
+  font-size: 100px;
+  text-decoration: none;
+}
+.p6:hover{
+  text-shadow: 0 0 30px rgba(172, 238, 255, 0.8);
+        color:rgb(255, 255, 255);
+        font-style: italic;
+       
+      
+}
+
+.p7{
+  position:absolute;
+  top:380px;
+  width:600px;
+  left:50px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
+.box { position: absolute; 
+  width: 900px; 
+  height: auto; 
+  border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer; } 
+  #box1 { top: 650px; left: 260px; } 
+  #box2 { top: 1250px; left: 260px; } 
+  .box img { width: 100%; height: auto; object-fit: contain; }
+
+  .imgx{
+    position: absolute;
+    left:950px;
+    top:250px;
+    width:400px;
+
+  }
+
+ .imgx img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+     z-index: 99;
+    
+   }
+
+
+   .p8{
+  position:absolute;
+  top:1940px;
+  left:650px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p9{
+  position:absolute;
+  top:2490px;
+  left:650px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p10{
+  position:absolute;
+  top:3000px;
+  left:650px;
+  color:rgb(87, 146, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+
+.img3{
+    position:absolute;
+    top: 1900px; left: 260px;
+    width:900px;
+    border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img3 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img4{
+    position:absolute;
+    top: 2450px; left: 260px;
+    width:900px;
+    border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img4 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img5{
+    position:absolute;
+    top: 2950px; left: 260px;
+    width:900px;
+    border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img5 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.imgx{
+    position: absolute;
+    left:800px;
+    top:150px;
+    width:600px;
+
+  }
+
+ .imgx img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+     z-index: 99;
+    
+   }
+
+  </style>

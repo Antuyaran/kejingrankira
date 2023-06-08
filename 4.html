@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kira🐻</title>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="#" />
+    
+  </head>
+  </html>
+  <body>
+    <div class="box" id="box1" onclick="changeImage('box1')">
+      <img id="image1" src="finalimg/web/adidas/1.jpeg" alt="img01">
+    </div>
+    
+    <div class="box" id="box2" onclick="changeImage('box2')">
+      <img id="image2" src="finalimg/web/adidas/shuhaibao.jpg" alt="img02">
+    </div>
+
+  <div class="img3">
+    <img src="finalimg/web/adidas/9.jpeg" alt="img03">
+</div>
+<div class="img4">
+    <img src="finalimg/web/adidas/10.jpeg" alt="img04">
+</div>
+<div class="img5">
+    <img src="finalimg/web/adidas/5.jpg" alt="img05">
+</div>
+
+
+  <div id="breaking">
+    <video width="450"  muted autoplay playsinline loop style="position: absolute; top: 150px; left: 910px;">
+        <source src="finalimg/web/adidas/adidas.mp4" type="video/mp4">
+    </video>
+    </div>
+
+    <div class="p1">
+      adidas GEN-BLUE 2022
+    </div>
+    <div class="p2">
+     2022.5
+    </div>
+    <div class="p3">
+      GEN-BLUE PROJECT: adidas Originals Brand Culture Empowerment Program 2022 is a joint initiative of adidas Originals, Shanghai Institute of Visual Arts and DeTao Education Group. GEN-BLUE 2022 encourages young design students to create their own creative design language with the unique perspective and energy of Gen Z, creating and interpreting stories on the theme of breaking the boundaries of identity, era, virtuality and reality, and embodying the power of originality to participate in and create the grand celebration of adidas Originals 50th anniversary.
+      <br>
+      The GEN-BLUE Spark Film Festival is an extension of GEN-BLUE 2022, aiming to showcase the video works of the students in GEN-BLUE 2022, share their creative thoughts and lead the audience to witness how this group of Gen Z creators are burning with their creative passion.
+     </div>
+     <div class="p4">
+      Click to change the pictures of graphic design concepts
+     </div>
+     <div class="p5">
+      Click to change the pictures of exhibition site
+     </div>
+     <a class="p6" href="graphicpage.html">Back</a>
+     <div class="p7">
+       Teammates:Ke Jingran, Chen Shiwen,  Chen Menglu,  Xu Xuanzhuo, Zhou Xinxin
+    </div>
+    <div class="p8">
+      Material design
+    </div>
+    <div class="p9">
+      Material design
+    </div>
+    <div class="p10">
+      Material design
+    </div>
+    
+
+
+     <script>
+     var currentImageIndex1 = 0;
+var images1 = [
+  "finalimg/web/adidas/6.jpeg",
+  "finalimg/web/adidas/5.jpeg",
+  "finalimg/web/adidas/kouzhao.png",
+  "finalimg/web/adidas/1.jpeg",
+];
+
+var currentImageIndex2 = 0;
+var images2 = [
+  "finalimg/web/adidas/3.jpeg",
+  "finalimg/web/adidas/4.jpeg",
+  "finalimg/web/adidas/8.png",
+  "finalimg/web/adidas/7.jpeg",
+];
+
+function changeImage(boxId) {
+  var image;
+  var currentImageIndex;
+  var images;
+
+  if (boxId === 'box1') {
+    image = document.getElementById("image1");
+    currentImageIndex = currentImageIndex1;
+    images = images1;
+  } else if (boxId === 'box2') {
+    image = document.getElementById("image2");
+    currentImageIndex = currentImageIndex2;
+    images = images2;
+  }
+
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  image.src = images[currentImageIndex];
+
+  if (boxId === 'box1') {
+    currentImageIndex1 = currentImageIndex;
+  } else if (boxId === 'box2') {
+    currentImageIndex2 = currentImageIndex;
+  }
+}
+
+    </script>
+
+  </body>
+
+  <style>
+    body{
+
+/*background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,  rgb(255, 255, 255) 6%, rgba(0, 0, 0, 1) 8%);*/
+background-color: rgb(0, 0, 0);
+
+height: 2000vh;
+position: relative;
+max-width: 1600px;
+margin: 0 auto;
+padding-bottom: 40px;
+}
+
+
+
+@font-face {
+    font-family: 'mboldi';
+    src:url('font/MirthaDisplayBoldItalic的副本.otf') format('truetype');
+    font-family:'mitalic';
+    src:url('font/MirthaDisplayItalic的副本.otf') format('truetype');
+    font-family:'mbold';
+    src:url('font/MirthaDisplayBold的副本.otf') format('truetype');
+    font-family:'mregular';
+    src:url('font/MirthaDisplayRegular的副本.otf') format('truetype');
+    
+    }
+
+
+.p1{
+  position:absolute;
+  top:50px;
+  left:50px;
+  color:#6adcff;
+  font-family: mregular;
+  font-size: 100px;
+}
+  
+.p2{
+  position:absolute;
+  top:160px;
+  left:50px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+  
+.p3{
+  position:absolute;
+  top:200px;
+  width:500px;
+  left:50px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.p4{
+  position:absolute;
+  top:650px;
+  left:550px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p5{
+  position:absolute;
+  top:1200px;
+  left:580px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p6{
+  position:absolute;
+  top:50px;
+  left:1250px;
+  color:#6adcff;
+  font-family: mregular;
+  font-size: 100px;
+  text-decoration: none;
+}
+.p6:hover{
+  text-shadow: 0 0 30px rgba(239, 255, 198, 0.8);
+        color:rgb(255, 255, 255);
+        font-style: italic;
+       
+      
+}
+
+.p7{
+  position:absolute;
+  top:420px;
+  width:550px;
+  left:50px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
+.box { position: absolute; 
+  width: 900px; 
+  height: auto; 
+  border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer; } 
+  #box1 { top: 650px; left: 260px; } 
+  #box2 { top: 1250px; left: 260px; } 
+  .box img { width: 100%; height: auto; object-fit: contain; }
+
+  .imgx{
+    position: absolute;
+    left:950px;
+    top:250px;
+    width:400px;
+
+  }
+
+ .imgx img {
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+     z-index: 99;
+    
+   }
+
+
+   .p8{
+  position:absolute;
+  top: 1900px;
+  left:650px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p9{
+  position:absolute;
+  top:2500px;
+  left:650px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p10{
+  position:absolute;
+  top:3100px;
+  left:650px;
+  color:#6adcff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+
+.img3{
+    position:absolute;
+    top: 1950px; left: 260px;
+    width:900px;
+    border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img3 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img4{
+    position:absolute;
+    top:2550px; left: 260px;
+    width:900px;
+    border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img4 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img5{
+    position:absolute;
+    top: 3150px; left: 260px;
+    width:900px;
+    border: 2px solid black; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img5 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+
+
+  </style>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KejingranKira</title>
+            <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="icon" href="finalimg/k.png" />
+        
+      </head>
+  </html>
+  <body>
+    <div class="box" id="box1" onclick="changeImage('box1')">
+      <img id="image1" src="finalimg/web/1hour/6.png" alt="img01">
+    </div>
+    
+    <div class="box" id="box2" onclick="changeImage('box2')">
+      <img id="image2" src="finalimg/web/1hour/1.JPG" alt="img02">
+    </div>
+
+  <div class="img3">
+    <img src="finalimg/web/1hour/7.png" alt="img03">
+</div>
+<div class="img4">
+    <img src="finalimg/web/1hour/6.JPG" alt="img04">
+</div>
+<div class="img5">
+    <img src="finalimg/web/1hour/10.JPeG"alt="img05">
+</div>
+<div class="img6">
+    <img src="finalimg/web/1hour/9.JPeG" alt="img06">
+</div>
+
+<div class="imgx">
+    <img src="finalimg/web/1hour/10.jpg" alt="imgxx">
+</div>
+
+    <div class="p1">
+        1 hour after school
+    </div>
+    <div class="p2">
+     2023.4
+    </div>
+    <div class="p3">
+        Breaking Music Festival is an electronic music festival project tailored for NetEase's electro music brand FEVER.
+        <br>
+        The location of the festival is the Lusheng Square in the Thousand Household Miao Village in Guizhou Province. We took the ancient legend of the Miao minority, "Mother Butterfly", as the entry point, trying to find the connection between electro music and traditional culture, and combined the silver ornaments in Miao costumes with the envelope line after the visualization of electronic music to complete our concept and visual content for this project.
+     </div>
+     <div class="p4">
+      Click to change the pictures of main visual
+     </div>
+     <div class="p5">
+        Click to change the pictures of event site
+     </div>
+     <a class="p6" href="exhibitionpage.html">Back</a>
+     <div class="p7">
+       Teammates:Ke Jingran,  Liu Shutong
+    </div>
+    <div class="p8">
+        Main visual attempt
+    </div>
+    <div class="p9">
+        Event site set-up
+    </div>
+    <div class="p10">
+        Children's drawings for the event
+    </div>
+    <div class="p11">
+        Children's drawings for the event
+    </div>
+    
+
+
+     <script>
+     var currentImageIndex1 = 0;
+var images1 = [
+"finalimg/web/1hour/000.png",
+"finalimg/web/1hour/6.png",
+
+ 
+];
+
+var currentImageIndex2 = 0;
+var images2 = [
+"finalimg/web/1hour/2.JPG",
+  "finalimg/web/1hour/4.JPG",
+  "finalimg/web/1hour/5.JPG",
+  "finalimg/web/1hour/3.JPG",
+  "finalimg/web/1hour/1.JPG"
+  
+
+];
+
+function changeImage(boxId) {
+  var image;
+  var currentImageIndex;
+  var images;
+
+  if (boxId === 'box1') {
+    image = document.getElementById("image1");
+    currentImageIndex = currentImageIndex1;
+    images = images1;
+  } else if (boxId === 'box2') {
+    image = document.getElementById("image2");
+    currentImageIndex = currentImageIndex2;
+    images = images2;
+  }
+
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  image.src = images[currentImageIndex];
+
+  if (boxId === 'box1') {
+    currentImageIndex1 = currentImageIndex;
+  } else if (boxId === 'box2') {
+    currentImageIndex2 = currentImageIndex;
+  }
+}
+
+    </script>
+
+  </body>
+
+  <style>
+    body{
+
+/*background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,  rgb(255, 255, 255) 6%, rgba(0, 0, 0, 1) 8%);*/
+background-color: rgb(0, 0, 0);
+
+height: 1000vh;
+position: relative;
+max-width: 1600px;
+margin: 0 auto;
+padding-bottom: 40px;
+}
+
+
+
+@font-face {
+    font-family: 'mboldi';
+    src:url('font/MirthaDisplayBoldItalic的副本.otf') format('truetype');
+    font-family:'mitalic';
+    src:url('font/MirthaDisplayItalic的副本.otf') format('truetype');
+    font-family:'mbold';
+    src:url('font/MirthaDisplayBold的副本.otf') format('truetype');
+    font-family:'mregular';
+    src:url('font/MirthaDisplayRegular的副本.otf') format('truetype');
+    
+    }
+
+
+.p1{
+  position:absolute;
+  top:50px;
+  left:50px;
+  color:rgb(52, 218, 255);
+  font-family: mregular;
+  font-size: 100px;
+}
+  
+.p2{
+  position:absolute;
+  top:160px;
+  left:50px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+  
+.p3{
+  position:absolute;
+  top:200px;
+  width:500px;
+  left:50px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.p4{
+  position:absolute;
+  top:630px;
+  left:600px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p5{
+  position:absolute;
+  top:1130px;
+  left:600px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p6{
+  position:absolute;
+  top:50px;
+  left:1250px;
+  color:rgb(52, 218, 255);
+  font-family: mregular;
+  font-size: 100px;
+  text-decoration: none;
+}
+.p6:hover{
+  text-shadow: 0 0 30px rgba(255, 163, 163, 0.8);
+        color:rgb(255, 255, 255);
+        font-style: italic;
+       
+      
+}
+
+.p7{
+  position:absolute;
+  top:380px;
+  width:600px;
+  left:50px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
+.box { position: absolute; 
+  width: 900px; 
+  height: auto; 
+  overflow: hidden; 
+  cursor: pointer; } 
+  #box1 { top: 650px; left: 260px; } 
+  #box2 { top: 1180px; left: 260px; } 
+  .box img { width: 100%; height: auto; object-fit: contain; }
+
+
+   .p8{
+  position:absolute;
+  top:1780px;
+  left:650px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p9{
+  position:absolute;
+  top:2250px;
+  left:650px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p10{
+  position:absolute;
+  top:2940px;
+  left:610px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+.p11{
+  position:absolute;
+  top:3750px;
+  left:610px;
+  color:rgb(52, 218, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  
+}
+
+
+.img3{
+    position:absolute;
+    top: 1750px; left: 120px;
+    width:1200px;
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img3 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img4{
+    position:absolute;
+    top: 2300px; left: 260px;
+    width:900px;
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img4 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img5{
+    position:absolute;
+    top: 3000px; left: 260px;
+    width:900px;
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img5 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.img6{
+    position:absolute;
+    top: 3800px; left: 260px;
+    width:900px;
+  overflow: hidden; 
+  cursor: pointer;
+
+}
+.img6 img{
+    width: 100%; height: auto; object-fit: contain;
+}
+
+.imgx{
+    position: absolute;
+    left:1030px;
+    top:150px;
+    width:550px;
+
+  }
+
+ .imgx img {
+     width: 60%;
+     height: auto;
+     object-fit: cover;
+     z-index: 99;
+    
+   }
+
+  </style>
